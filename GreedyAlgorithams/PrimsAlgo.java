@@ -27,7 +27,6 @@ public class PrimsAlgo {
         int ans = 0;
 
         while(!q.isEmpty()) {
-            System.out.println("=============");
             Pair pair = q.poll();
 
             int u = pair.v;
@@ -90,13 +89,6 @@ public class PrimsAlgo {
         edge4.add(new ArrayList<Integer> (List.of(2,2)));
         edge4.add(new ArrayList<Integer> (List.of(3,5)));
         adj.add(4,edge4);
-
-        // // edge 5 -> 2,3
-        // ArrayList<ArrayList<Integer>> edge5 = new ArrayList<>();
-        // edge5.add(new ArrayList<Integer> (List.of(2,1)));
-        // edge5.add(new ArrayList<Integer> (List.of(3,1)));
-        // edge5.add(new ArrayList<Integer> (List.of(4,2)));
-        // adj.add(5,edge5);
 
         System.out.println(primsAlgo.spanningTree(5, adj));
 

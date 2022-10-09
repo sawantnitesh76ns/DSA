@@ -65,43 +65,40 @@ public class DijkrasAlgo {
         ArrayList<ArrayList<ArrayList<Integer>>> adj = new ArrayList<>();
         
 
-        // edge 0 -> 2,3
-        ArrayList<ArrayList<Integer>> edge0 = new ArrayList<>();
-        edge0.add(new ArrayList<Integer> (List.of(2,4)));
-        edge0.add(new ArrayList<Integer> (List.of(3,2)));
-        adj.add(0,edge0);
-
-        // edge 1 -> 2,4
-        ArrayList<ArrayList<Integer>> edge1 = new ArrayList<>();
-        edge1.add(new ArrayList<Integer> (List.of(2,9)));
-        edge1.add(new ArrayList<Integer> (List.of(4,1)));
-        adj.add(1,edge1);
-
-        // edge 2 --> 1,5,3
-        ArrayList<ArrayList<Integer>> edge2 = new ArrayList<>();
-        edge2.add(new ArrayList<Integer> (List.of(1,9)));
-        edge2.add(new ArrayList<Integer> (List.of(3,3)));
-        edge2.add(new ArrayList<Integer> (List.of(5,1)));
-        adj.add(2,edge2);
-
-        // edge 3 -> 2,5
-        ArrayList<ArrayList<Integer>> edge3 = new ArrayList<>();
-        edge3.add(new ArrayList<Integer> (List.of(2,3)));
-        edge3.add(new ArrayList<Integer> (List.of(5,1)));
-        adj.add(3,edge3);
-
-        // edge 0 -> 2,3
-        ArrayList<ArrayList<Integer>> edge4 = new ArrayList<>();
-        edge4.add(new ArrayList<Integer> (List.of(1,1)));
-        edge4.add(new ArrayList<Integer> (List.of(5,2)));
-        adj.add(4,edge4);
-
-        // edge 0 -> 2,3
-        ArrayList<ArrayList<Integer>> edge5 = new ArrayList<>();
-        edge5.add(new ArrayList<Integer> (List.of(2,1)));
-        edge5.add(new ArrayList<Integer> (List.of(3,1)));
-        edge5.add(new ArrayList<Integer> (List.of(4,2)));
-        adj.add(5,edge5);
+         // edge 0 -> 2,3
+         ArrayList<ArrayList<Integer>> edge0 = new ArrayList<>();
+         edge0.add(new ArrayList<Integer> (List.of(1,2)));
+         edge0.add(new ArrayList<Integer> (List.of(4,6)));
+         edge0.add(new ArrayList<Integer> (List.of(3,7)));
+         adj.add(0,edge0);
+ 
+         // edge 1 -> 2,4
+         ArrayList<ArrayList<Integer>> edge1 = new ArrayList<>();
+         edge1.add(new ArrayList<Integer> (List.of(4,4)));
+         edge1.add(new ArrayList<Integer> (List.of(2,1)));
+         edge1.add(new ArrayList<Integer> (List.of(0,2)));
+         adj.add(1,edge1);
+ 
+         // edge 2 --> 1,5,3
+         ArrayList<ArrayList<Integer>> edge2 = new ArrayList<>();
+         edge2.add(new ArrayList<Integer> (List.of(1,1)));
+         edge2.add(new ArrayList<Integer> (List.of(3,3)));
+         edge2.add(new ArrayList<Integer> (List.of(4,2)));
+         adj.add(2,edge2);
+ 
+         // edge 3 -> 2,5
+         ArrayList<ArrayList<Integer>> edge3 = new ArrayList<>();
+         edge3.add(new ArrayList<Integer> (List.of(0,7)));
+         edge3.add(new ArrayList<Integer> (List.of(2,3)));
+         edge3.add(new ArrayList<Integer> (List.of(4,5)));
+         adj.add(3,edge3);
+ 
+         // edge 4 -> 2,3
+         ArrayList<ArrayList<Integer>> edge4 = new ArrayList<>();
+         edge4.add(new ArrayList<Integer> (List.of(1,4)));
+         edge4.add(new ArrayList<Integer> (List.of(2,2)));
+         edge4.add(new ArrayList<Integer> (List.of(3,5)));
+         adj.add(4,edge4);
 
         int[] result = dijkstra(6, adj, 1);
         System.out.println(Arrays.toString(result));
